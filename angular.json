@@ -105,11 +105,9 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+           "assets": [
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "src/styles.css",
@@ -120,5 +118,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "27435b0a-338b-45ec-a0ac-a055adb71fc1"
   }
 }

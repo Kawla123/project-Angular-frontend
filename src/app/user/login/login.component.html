@@ -1,26 +1,29 @@
-<div class="mb-4">
-  <h2 class="text-success">
-    Sign in
+<div class="mb-4 text-center">
+  <h2 class="text-dark fw-bold">
+    Welcome Back
   </h2>
+  <p class="text-muted fst-italic">
+    Sign in to continue your journey with <span class="text-dark fw-bold">Perfume Bliss</span>.
+  </p>
   <div>Don't have an account?
-    <a routerLink="/signup" class="text-decoration-none fw-medium text-success d-inlin-block">Sign up</a>
+    <a routerLink="/signup" class="text-decoration-none fw-medium text-dark">Sign up</a>
   </div>
 </div>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="mb-3">
-    <input class="form-control bg-body-secondary" placeholder="Email" formControlName="email">
-    <div class="error-feedback" *ngIf="hasDisplayableError('email') && form.controls.email.hasError('required')">
+    <input class="form-control bg-light border-dark rounded-3" placeholder="Email" formControlName="email">
+    <div class="error-feedback text-danger mt-1" *ngIf="hasDisplayableError('email') && form.controls.email.hasError('required')">
       Please enter your email address.
     </div>
   </div>
   <div class="mb-3">
-    <input class="form-control bg-body-secondary" placeholder="Password" formControlName="password">
-    <div class="error-feedback" *ngIf="hasDisplayableError('password') && form.controls.password.hasError('required')">
+    <input class="form-control bg-light border-dark rounded-3" placeholder="Password" formControlName="password" type="password">
+    <div class="error-feedback text-danger mt-1" *ngIf="hasDisplayableError('password') && form.controls.password.hasError('required')">
       Please enter your password.
     </div>
   </div>
   <div class="mt-4">
-    <button type="submit" class="btn btn-success w-100 rounded-3">
+    <button type="submit" class="btn btn-dark w-100 rounded-3">
       Sign in
     </button>
   </div>
